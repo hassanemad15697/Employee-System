@@ -2,6 +2,8 @@ package com.spring.model;
 
 import com.spring.model.Enums.Gender;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -26,8 +28,10 @@ public class Employee {
     @Column(name = "employee_phone")
     private String phone;
     @Column(name = "employee_createdDate")
+    @CreationTimestamp
     private Date createdDate;
     @Column(name = "employee_lastUpdateDate")
+    @UpdateTimestamp
     private Date lastUpdateDate;
     @Column(name = "employee_gender")
     private Gender gender;
