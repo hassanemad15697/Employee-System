@@ -34,6 +34,7 @@ public class Employee {
     @UpdateTimestamp
     private Date lastUpdateDate;
     @Column(name = "employee_gender")
+    @Enumerated(EnumType.STRING)
     private Gender gender;
 
 }
