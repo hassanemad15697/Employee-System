@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { EmployeeContentComponent } from './employee-content/employee-content.component';
+import { OptionsComponent } from './options/options.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { EmployeeContentComponent } from './employee-content/employee-content.co
     FooterComponent,
     SignupComponent,
     SigninComponent,
-    EmployeeContentComponent
+    EmployeeContentComponent,
+    OptionsComponent
   ],
   imports: [
     BrowserModule
