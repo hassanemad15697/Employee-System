@@ -14,14 +14,14 @@
   </thead>
   <tbody>
 
-  <tr>
-    <th scope="row">2</th>
-    <td>Jacob</td>
-    <td>Thornton</td>
-    <td>@fat</td>
-    <td>Jacob</td>
-    <td>Thornton</td>
-    <td>@fat</td>
+  <tr *ngFor="let empl of employees">
+    <th scope="row">{{empl.id}}</th>
+    <td>{{empl.name}}</td>
+    <td>{{empl.address}}</td>
+    <td>{{empl.age}}</td>
+    <td>{{empl.gender}}</td>
+    <td>{{empl.phone}}</td>
+    <td>{{empl.updatedDate}}</td>
     <td class="actions">
       <button type="submit" class="btn btn-primary" routerLink="/actions">Update</button>
       <button type="submit" class="btn btn-danger">Delete</button>

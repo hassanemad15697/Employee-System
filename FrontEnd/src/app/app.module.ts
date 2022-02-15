@@ -8,6 +8,7 @@ import { SigninComponent } from './signin/signin.component';
 import { EmployeeContentComponent } from './employee-content/employee-content.component';
 import { OptionsComponent } from './options/options.component';
 import {RouterModule, Routes} from "@angular/router";
+import {HttpClientModule} from "@angular/common/http";
 
 const routes : Routes =[
   {path: 'signup' , component : SignupComponent},
@@ -32,7 +33,8 @@ const routes : Routes =[
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
