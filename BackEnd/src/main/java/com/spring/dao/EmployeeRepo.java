@@ -8,5 +8,4 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @CrossOrigin("http://localhost:4200/")
 @RepositoryRestResource
 public interface EmployeeRepo extends JpaRepository<Employee,Integer> {
-
 }

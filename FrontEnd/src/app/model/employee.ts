@@ -7,7 +7,7 @@ export class Employee {
   phone : string;
   address : string;
   createdDate : Date;
-  updatedDate : Date;
+  lastUpdateDate : Date;
 
 
   constructor(id: number, name: string, gender: string, age: string, phone: string, address: string, createdDate: Date, updatedDate: Date) {
@@ -18,6 +18,6 @@ export class Employee {
     this.phone = phone;
     this.address = address;
     this.createdDate = createdDate;
-    this.updatedDate = updatedDate;
+    this.lastUpdateDate = updatedDate;
   }
 }
