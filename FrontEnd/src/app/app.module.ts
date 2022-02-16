@@ -9,14 +9,15 @@ import { EmployeeContentComponent } from './employee-content/employee-content.co
 import { OptionsComponent } from './options/options.component';
 import {RouterModule, Routes} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
+import {RouteActivatedService} from "./service/route-activated.service";
 
 const routes : Routes =[
   {path: 'signup' , component : SignupComponent},
   {path: 'signin' , component : SigninComponent},
-  {path: 'employee' , component : EmployeeContentComponent},
-  {path: 'actions' , component : OptionsComponent},
-  {path: '' , component : EmployeeContentComponent},
-  {path: '**' , component : EmployeeContentComponent}
+  {path: 'employee' , component : EmployeeContentComponent, canActivate: [RouteActivatedService]},
+  {path: 'actions' , component : OptionsComponent, canActivate: [RouteActivatedService]},
+  {path: '' , component : EmployeeContentComponent, canActivate: [RouteActivatedService]},
+  {path: '**' , component : EmployeeContentComponent, canActivate: [RouteActivatedService]}
 
 ];
 
