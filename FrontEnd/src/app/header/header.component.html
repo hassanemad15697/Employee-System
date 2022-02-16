@@ -9,10 +9,10 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="employee">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isAuthonicatedUser()">
           <a class="nav-link" href="employee">Link</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" *ngIf="isAuthonicatedUser()">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
@@ -23,17 +23,17 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isAuthonicatedUser()">
           <a class="nav-link disabled">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <form class="d-flex" *ngIf="isAuthonicatedUser()">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
       <div class="control">
         <button class="btn btn-outline-success" routerLink="signin" type="submit">Login</button>
-        <button class="btn btn-outline-danger" type="submit">Logout</button>
+        <button class="btn btn-outline-danger" type="submit" *ngIf="isAuthonicatedUser()">Logout</button>
       </div>
     </div>
   </div>
